@@ -1,0 +1,29 @@
+{
+  "name": "express-firebase",
+  "version": "1.0.0",
+  "description": "Example Project using Nodejs, Express.js, Jest, Firebase and Firestore etc.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahsan-codejit/express-firebase.git"
+  },
+  "author": "Md. Ahsan Habib (ahhasan.1325@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahsan-codejit/express-firebase/issues"
+  },
+  "homepage": "https://github.com/ahsan-codejit/express-firebase#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.1.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.9.0"
+  }
+}

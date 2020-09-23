@@ -10,7 +10,7 @@ Router.route('/')
 
 Router.route('/:id')
     .put(orderValidator, (req, res) => {
-        res.status(201).json({ message: 'put' })
+        res.status(200).json({ message: 'put' })
     })
 
 

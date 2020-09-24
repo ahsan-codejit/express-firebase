@@ -3,7 +3,8 @@ const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
 
-let routes = require('../routes');
+let routes = require('../../routes');
+let notFound = require('../middlewares/notFound');
 
 module.exports.init = async ({ app }) => {
     // adding Helmet to enhance your API's security
@@ -19,9 +20,9 @@ module.exports.init = async ({ app }) => {
     // adding morgan to log HTTP requests
     app.use(morgan('combined'));
 
-    //custom middlewares
-    // customMiddlewares(app);
-
     // Use Api routes in the App
     routes({ app });
+
+    //custom middlewares
+    app.use(notFound);
 }

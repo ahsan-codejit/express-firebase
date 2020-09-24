@@ -23,6 +23,9 @@ describe('Testing endpoint POST /orders ', () => {
                 title: "Test"
             });
         expect(res.status).toEqual(201);
+        expect(res.body).toHaveProperty('status');
+        expect(res.body).toHaveProperty('order');
+        expect(res.body.order).toHaveProperty('id');
     }, 20000);
 });
 
@@ -43,5 +46,17 @@ describe('Testing endpoint PUT /orders/:id ', () => {
                 title: "Test"
             });
         expect(res.status).toEqual(200);
+        expect(res.body).toHaveProperty('status');
+        expect(res.body.status).toMatch(SUCCESS);
+        expect(res.body).toHaveProperty('order');
+    }, 20000);
+
+    it('it should return status code 404', async () => {
+        let res = await request
+            .put('/orders/')
+            .send({
+                title: "Test"
+            });
+        expect(res.status).toEqual(404);
     }, 20000);
 });

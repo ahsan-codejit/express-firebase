@@ -1,4 +1,4 @@
-let db = require('../../db/firebase/mockDB');
+let db = require('../../db');
 let Repository = require('../../repositories/firebase/orders')(db);
 let OrderModel = require('../../models/orders')(Repository);
 
